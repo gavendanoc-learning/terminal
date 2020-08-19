@@ -1,0 +1,9 @@
+README.md
+flows
+learning
+test.md
+total 8
+-rwxrwxrwx 1 gabo gabo 3802 Aug 18 06:14 README.md
+drwxrwxrwx 1 gabo gabo 4096 Aug 18 06:16 flows
+drwxrwxrwx 1 gabo gabo 4096 Aug 17 22:32 learning
+-rwxrwxrwx 1 gabo gabo 2555 Aug 17 23:14 test.md

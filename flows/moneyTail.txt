@@ -1,0 +1,7 @@
+    return moneyCounter
+
+myPiggyBank = piggyBank()
+
+print("total : ", myPiggyBank(10))
+print("total : ", myPiggyBank(2))
+print("total : ", myPiggyBank(5))
