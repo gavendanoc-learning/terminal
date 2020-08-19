@@ -3,7 +3,7 @@
 Contine : archivos y directorios y forman el arbol de directorios.
 
 listar todos los archivos 
-$ ls -a
+```$ ls -a```
 
 listar en lista
 $ ls -l
