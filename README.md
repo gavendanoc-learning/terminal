@@ -2,7 +2,7 @@
 
 Contine : archivos y directorios y forman el arbol de directorios.
 
-listar todos los archivos 
+listar todos los archivos
 ```$ ls -a```
 
 listar en lista
@@ -81,7 +81,7 @@ mostrar solo las ultimas lineas del archivo
 
 Procesamiento de texto complejo
 
-- grep : permite trabajar con expresiones regulares en archivos
+#### grep : permite trabajar con expresiones regulares en archivos
 
 Buscar la palabra "trabajar" en el archivo README.md
 ```$ grep trabajar README.txt```
@@ -90,7 +90,7 @@ Buscar la palabra "trabajar" y coincidir mayusculas y minusculas
 ```$ grep -i trabajar README.txt```
 
 
-- sed (Stream editor) : Trabaja con flujos. Un caso muy comun es reemplzar una expresion por otra. 
+#### sed (Stream editor) : Trabaja con flujos. Un caso muy comun es reemplzar una expresion por otra. 
 
 
 s -> substitucion
@@ -101,10 +101,10 @@ g -> global, aplicar a todas las coincidencias
 
 Esto no cambia el archivo, volviendo a hacer un cat dump.txt no se vera nada nuevo, lo que hace es que crea un nuevo flujo e imprime en STDOUT. https://likegeeks.com/es/sed-de-linux/#Entendiendo-el-Comando-Sed-de-Linux 
 
-- awk : Sirve tambien super bien para el tratamiento de texto, pero para achivos estructurados, como comas, tabs o puntos.
+#### awk : Sirve tambien super bien para el tratamiento de texto, pero para achivos estructurados, como comas, tabs o puntos.    
 
-';' -> delimitador de columnas
-'{print $1}' -> es un comando, imprime la primera columna
+';' -> delimitador de columnas      
+'{print $1}' -> es un comando, imprime la primera columna    
 
 ```$ awk -F ';' '{ print $1 }' nuevasPelis.csv```
 
