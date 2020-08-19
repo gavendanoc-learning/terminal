@@ -224,6 +224,58 @@ Alterar permisos
 - Cambiar el dueño `chown`
 - Cambiar el grupo de acceso `chgrp`
 
+Vamos a probar con chmod. Esto es para cambiar los permisos de _others_(`o`) para que  _no puedan_ (`-`) ejecutar (`x`) El archivo test.md  
+
+$ chmod o-x test.md
+
+Asi de facil. Luego se lo volvemos a añadir  
+
+$ chmod o+x test.md
+
+Existe otra forma y es verlo como binarios.
+
+| Lectura | Escritura | Ejecucion | Valor |
+|---------|-----------|-----------|-------|
+| 1       | 0         | 0         | 4     |
+| 1       | 1         | 0         | 6     |
+| 1       | 1         | 1         | 7     |
+
+De esta forma podemos dar permisos a los 3 tipos de usuarios  
+
+```$ chmod 744 test.md```
+
+Aqui le damos todos los permisos al dueño, y solo lectura al grupo y otros.
+
+
+## Menjo de Paqutes
+- apt : ubuntu
+- zypper : zuse distro
+- rpm : universal, pero rustico
+
+```
+$ sudo apt-get update
+$ sudo apt-get install lynx
+```
+
+Esta es la forma de descargar paquetes binarios, osea ejecutables. Pero cada lenguaje tiene su propio orquestador de paquetes
+
+ - pip : python
+ - composer :php
+ - npm : js
+
+Existen otros mas genericos
+
+- conda
+- homebrew
+
+## Compresion de archivos
+
+- Copias de seguridad
+- Envios por internet
+
+Compress test.md and delete it `$ gzip test.md`
+Decompress test.md.gz and delete it `$ gzip -d test.md.gz`
+
 
 
 
