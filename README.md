@@ -270,12 +270,40 @@ Existen otros mas genericos
 
 ## Compresion de archivos
 
+#### Using zip to compress
 - Copias de seguridad
 - Envios por internet
 
 Compress test.md and delete it `$ gzip test.md`
 Decompress test.md.gz and delete it `$ gzip -d test.md.gz`
 
+#### Using the tar command to group
 
+Group files toguether  
 
+ - `cf` -> create file
+ - `backup/*` group all files in this directory
+
+`$ tar cf backup.tar backup/*`
+
+See whats inside the grouped files   
+
+`$ tar tf backup.tar`
+
+Vamos a expandirlo con
+
+- `xf` : extract file    
+
+`$ tar xf backup.tar`
+
+Aqui solo agrupamos archivos, no se comprimieron. Pero podemos hacer ambas cosas
+
+- `czf` : create zip file
+
+`$ tar czf backup.tgz backup/*`
+
+Y si queremos extraer todo se utiliza
+ - `xzf` : Extract zip file
+
+`$ tar xzf backup.tgz`
 
