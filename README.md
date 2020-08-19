@@ -180,7 +180,49 @@ Matar un proceso que no se comporte bien
 2. Mirar el numero PID
 3. Matarlo con $ kill -9 NUMERO_PID
 
+## Permisos sobre los archivos
 
+Desde sus inicioos unix fue diseñado como un sistema multiusuario. Por lo tanto la seguridad es intrinseca en el sistema operativo.
+
+Todos los archivos nuix tienen
+- Dueño
+- Grupo que puede acceder
+- Otros
+
+Permisos
+- Lectura
+- Escritura
+- Ejecucion (Depende si es ejecutable o no)
+
+Por lo tanto hay 9 tipos de combinaciones
+
+|       | Lectura | Escritura | Ejecucion |
+|-------|---------|-----------|-----------|
+| Dueño |         |           |           |
+| Grupo |         |           |           |
+| Otros |         |           |           |
+
+Como vemos los permisos de un archivo?
+```$ ls -l ```
+
+drwxrwxrwx 1 gabo gabo 4096 Aug 18 07:32 back-front-graund
+drwxrwxrwx 1 gabo gabo 4096 Aug 18 07:03 flows
+drwxrwxrwx 1 gabo gabo 4096 Aug 17 22:32 learning
+-rwxrwxrwx 1 gabo gabo 2555 Aug 17 23:14 test.md
+
+
+Entonces ... A descomponer
+
+1. La primea letra es el tipo, `d` es un directorio, `-` es archivo y `l` es un link o acceso directo
+2. Siguen los permisos `r` es read, `w` es write, `x` es ejecutar y `-` significa que no se tienen permisos
+3. Fijese que se reptite tres veces, las tres primeras son para Dueño, luego grupo y por ultimo otros
+4. En caso de directorios la `x` significa que puedo entrar.
+
+Alterar permisos
+
+- Cambiar permisos `chmod`
+- Cambiar el dueño `chown`
+- Cambiar el grupo de acceso `chgrp`
 
 
 
