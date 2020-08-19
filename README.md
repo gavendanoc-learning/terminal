@@ -6,34 +6,34 @@ listar todos los archivos
 ```$ ls -a```
 
 listar en lista
-$ ls -l
+```$ ls -l```
 
 listar en forma de lista pero con unidades de Kb o Mb
-$ ls -lh
+```$ ls -lh```
 
 juntar todo
-$ ls -alh
+```$ ls -alh```
 
 imprimir el dictorio local
-$ pwd
+```$ pwd```
 
 cambiar directorio
-$ cd address
+```$ cd address```
 
 crear un directorio
-$ mkdir name
+```$ mkdir name```
 
 copiar test.py a directorio test
-$ cp test.py test/
+```$ cp test.py test/```
 
 borrar test.py
-rm test.py
+```$ rm test.py```
 
 borrar directorio 
-rmdir test.py
+```$ rmdir test.py```
 
 mover archivo test.py hacia test/
-mv test.py test.py test/
+```$ mv test.py test.py test/```
 
 ## Tipos de archivos
 
@@ -45,7 +45,7 @@ Los archivos de texto los puedo editar con vim o nano
 
 Ejecutar vim
 
-$ vim archivo.txt
+```$ vim archivo.txt```
 
 El modo edicion se inicia con la letra i, lo que escriba va a aparecer en pantalla.
 Para guardar debo de salir del modo edicion
@@ -58,10 +58,10 @@ Por ultimo para salirme necesito
 2. poner la letra q
 
 Para salirse sin guardar cambios
-:q!
+```:q!```
 
 Grabar y salir a la vez de vim
-:x
+```:x```
 
 
 ## Utilidades batch
@@ -69,25 +69,25 @@ Grabar y salir a la vez de vim
 A estas herramientas se les pasa toda la informacion para que ellos puedan retornar un resultado
 
 mostrar todo el contenido del archivo
-$ cat tables.txt
+```$ cat tables.txt```
 
 mostrar solo las promeras lineas del archivo 
-$ head -n 5 tables.txt
-$ head tables.txt
+```$ head -n 5 tables.txt```
+```$ head tables.txt```
 
 mostrar solo las ultimas lineas del archivo
-$ tail -n 5 tables.txt
-$ tail tables.txt
+```$ tail -n 5 tables.txt```
+```$ tail tables.txt```
 
 Procesamiento de texto complejo
 
 - grep : permite trabajar con expresiones regulares en archivos
 
 Buscar la palabra "trabajar" en el archivo README.md
-$ grep trabajar README.txt
+```$ grep trabajar README.txt```
 
 Buscar la palabra "trabajar" y coincidir mayusculas y minusculas
-$ grep -i trabajar README.txt
+```$ grep -i trabajar README.txt```
 
 
 - sed (Stream editor) : Trabaja con flujos. Un caso muy comun es reemplzar una expresion por otra. 
@@ -97,7 +97,7 @@ s -> substitucion
 Hanks/Selleck -> cambiar Hanks por Sellect
 g -> global, aplicar a todas las coincidencias
 
-$ sed 's/Hanks/Selleck/g' dump.txt
+```$ sed 's/Hanks/Selleck/g' dump.txt```
 
 Esto no cambia el archivo, volviendo a hacer un cat dump.txt no se vera nada nuevo, lo que hace es que crea un nuevo flujo e imprime en STDOUT. https://likegeeks.com/es/sed-de-linux/#Entendiendo-el-Comando-Sed-de-Linux 
 
@@ -106,7 +106,7 @@ Esto no cambia el archivo, volviendo a hacer un cat dump.txt no se vera nada nue
 ';' -> delimitador de columnas
 '{print $1}' -> es un comando, imprime la primera columna
 
-$ awk -F ';' '{ print $1 }' nuevasPelis.csv
+```$ awk -F ';' '{ print $1 }' nuevasPelis.csv```
 
 
 la verdad aqui se utiliza mucho lo qye son expresiones regulares. Que curioso :)
@@ -124,21 +124,21 @@ Asi no tenemos que escribir todo el tiempo lo mismo!
 
 ¿Como se hace esta maravilla? Con un <, vamos a intentarlo. 
 Esto se puede hacer con un comando de mysql para crear automaticamente las tablas
-$ mysql -h localhost -u root -p1234 < dump.sql
+```$ mysql -h localhost -u root -p1234 < dump.sql```
 
 O con un programa de python.
-$ python3 flows/sayHi.py < flows/input.txt
+```$ python3 flows/sayHi.py < flows/input.txt```
 
 Esto se llama *redireccionar a la entrada*, para redireccionar a la salida se hace con elsimbolo >:
 
 Escribe el directorio en un archivo directorio.txt
-$ ls > directorio.txt
+```$ ls > directorio.txt```
 
 Escribe la salida del programa sayHi.py en output.txt
-$ python3 flows/sayHi.py > flows/output.py
+```$ python3 flows/sayHi.py > flows/output.py```
 
 Si vuelves a repetir el comando se va a sobreescribir el archivo. Usar >> para concatenar al final.
-$ ls -l > directorios.txt
+```$ ls -l > directorios.txt```
 
 ### Pipes
 
@@ -147,11 +147,11 @@ Si ya tenemos que el contenido de un archivo 'a.txt' sea la entrada de 'b.txt' y
 El simbolo es | 
 Utilidades : 
 more -> permite paginar el archivo
-$ ls -l | more 
+```$ ls -l | more ```
 
 wc -> word count
-$ cat flows/input.txt | wc
-$ cat flows/input.txt | wc -l
+```$ cat flows/input.txt | wc```
+```$ cat flows/input.txt | wc -l```
 
 ## background and foreground process
  
@@ -165,16 +165,16 @@ ambien podemos mandar un proceso al background con Ctrl + z
 Y lo podemos mandar al foreground usando $fg en consola
 
 Ver los procesos del sistema
-$ ps ax
+```$ ps ax```
 
 Mostrar solo las lineas que tengan inint
-$ ps ax | grep init
+```$ ps ax | grep init```
 
 Utilidad interactiva para ver los procesos
-$ top
+```$ top```
 
 Matar un proceso que no se comporte bien
-$ python3 back-front-graund/infinity.py &
+```$ python3 back-front-graund/infinity.py &```
 
 1. Mirar todos los procesos con $ ps ax
 2. Mirar el numero PID
