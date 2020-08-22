@@ -307,3 +307,42 @@ Y si queremos extraer todo se utiliza
 
 `$ tar xzf backup.tgz`
 
+## Find new files
+`locate` utiliza una base de datos para buscar
+
+- `$ locate README.md`
+
+Si no se encuentra entonces toca correr el comando `$ sudo updatedb` primero.
+
+- `$ whereis echo` encuentra el lugar del comando echo
+
+- `$ find . -user gabo` encuentra todos los archivos del usuario gabo :)
+- `$ find . -type f -mtime +7` buscar archivos `-type f`  modificados hace mas de 7 dias `-mtime +7`
+- `$ find . -type f -mtime +7 -exec cp {} ./backup/ \;` lo mismo que antes pero se ejecuta `-exec cp` una operacion con los archivos buscados. En este caso se copia todos los archivos `cp {}` al backup `./backup/` y se finaliza el comando `\;`
+
+## Interaccion via HTTP
+
+- `curl` Se usa para hacer pedidos crudos, se muestra literalmente la respuesta http
+- `wget` descarga desde servidores http
+
+Se puede utilizar `curl -v https://platzi.com | more` para mostrar todas las peticiones que se hacen con el servidor. Fijese que se utiliza un pipe con el comando more para mostrar el mensaje por pedazos. 
+`curl -v https://platzi.com > /dev/null` Otra cosa que se hace mucho es cuando se quiere ver unicamente los encabezados http. 
+Entonces se redirecciona la salida a un archivo que no existe, un  tipo de "agujero negro" en linux. Esto redirecciona toda la informacion que no queremos ver. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
