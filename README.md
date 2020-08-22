@@ -323,7 +323,7 @@ Si no se encuentra entonces toca correr el comando `$ sudo updatedb` primero.
 ## Interaccion via HTTP
 
 - `curl` Se usa para hacer pedidos crudos, se muestra literalmente la respuesta http
-- `wget` descarga desde servidores http
+- `wget` descarga archivos desde servidores http. Se utiliza mucho para hacer descargas de manera programatica!
 
 Se puede utilizar `curl -v https://platzi.com | more` para mostrar todas las peticiones que se hacen con el servidor. Fijese que se utiliza un pipe con el comando more para mostrar el mensaje por pedazos. 
 `curl -v https://platzi.com > /dev/null` Otra cosa que se hace mucho es cuando se quiere ver unicamente los encabezados http. 
