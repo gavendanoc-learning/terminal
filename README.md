@@ -330,6 +330,28 @@ Se puede utilizar `curl -v https://platzi.com | more` para mostrar todas las pet
 Entonces se redirecciona la salida a un archivo que no existe, un  tipo de "agujero negro" en linux. Esto redirecciona toda la informacion que no queremos ver. 
 
 
+## Varibles de entorno
+
+Son las que permiten ejecutar `echo` en vez de `/bin/echo`. Es una definicion global a la que todos los procesos tiene acceso. 
+
+En el ejemplo anterior se analizaba la variable $PATH. En esta variable se almacenan las rutas en donde la terminal debe buscar los ejecutables. 
+
+- `$ echo $PATH` ver lo que tiene la variable path
+- `$ ls /usr/bin/ -l` permite ver todos los ejecutables: `curl`, `git`, `echo`, ...
+
+#### Asignacion
+
+- `$ export VAR=valor` crea la asignacion
+- `$ VAR=valor python env.py` sobreescribir unicamente para la sigueinte ejecucion `python env.py`
+
+## Automatizacion de tareas
+
+El bash shell es un inteprete de comandos y un lenguaje de programacion! Es pueden crear nuevos comandos. 
+
+Se pueden juntar varios comandos dentro de uno. 
+
+
+
 
 
 
